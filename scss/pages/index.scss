@@ -1,0 +1,129 @@
+.Card{
+    max-width: 800px;
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    flex-direction: row;
+    margin: 20px 0;
+    border-radius: 12px;
+    text-transform: uppercase;
+
+    .sedans{
+        border-radius: 10px 0 0 10px;
+        @include mq("tablet"){
+            border-radius: 10px 10px 0 0;
+        }
+    }
+    .luxury{
+        border-radius: 0 10px 10px 0;
+        @include mq("tablet"){
+            border-radius: 0 0 10px 10px;
+        }
+    }
+
+    @include mq("tablet"){
+        max-width: 300px;
+        height:90%;
+        flex-direction: column;
+    }
+
+    &__item{
+        width:100%;
+        height: 100%;
+        padding: 20px 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        @include mq("tablet"){
+            padding: 20px 30px;
+        }
+
+        &:nth-child(1) {
+            background-color: $color-bright-orange;
+        }
+        &:nth-child(2) {
+            background-color: $color-dark-cyan;
+        }
+        &:nth-child(3) {
+            background-color: $color-very-dark-cyan;
+        }
+        &__image{
+            width: 60px;
+            height: 40px;
+            @include mq("tablet"){
+                margin: 20px 0;
+            }
+        
+        }
+
+        &__header{
+            font-family: $font-family-first;
+            color: $color-very-light-gray;
+            font-weight: 700;
+            @include mq("tablet"){
+                margin: 20px 0;
+            }
+        }
+        &__text{
+            font-family: $font-family-second;
+            color: $color-transparent-white;
+            font-size: 12px;
+            line-height: 1.3rem;
+            padding: 10px 0;
+            @include mq("tablet"){
+                margin: 10px 0;
+            }
+        }
+
+        &__button{
+            width: 150px;
+            height: 50px;
+            border-radius: 26px;
+            cursor: pointer;
+            transition: .2s ;
+            font-size: 1rem;
+            font-family: $font-family-second;
+            font-weight: 500;
+            
+            @include mq("tablet"){
+                margin: 20px 0;
+            }
+        }
+
+        .orange{
+            background-color: $color-very-light-gray;
+            color: $color-bright-orange;
+            &:hover{
+                border: 2px solid $color-very-light-gray;
+                color:$color-very-light-gray;
+                background-color: $color-bright-orange;
+            }
+            
+        }
+        .dark-cyan{
+            background-color: $color-very-light-gray;
+            color: $color-dark-cyan;
+            &:hover{
+                border: 2px solid $color-very-light-gray;
+                color:$color-very-light-gray;
+                background-color: $color-dark-cyan;
+            }
+            
+        }
+        .very-dark-cyan{
+            background-color: $color-very-light-gray;
+            color: $color-very-dark-cyan;
+            &:hover{
+                border: 2px solid $color-very-light-gray;
+                color:$color-very-light-gray;
+                background-color: $color-very-dark-cyan;
+            }
+            
+        }
+
+
+    }
+
+
+}
