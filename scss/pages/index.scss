@@ -7,7 +7,6 @@
     flex-direction: row;
     margin: 20px 0;
     border-radius: 12px;
-    text-transform: uppercase;
 
     .sedans{
         border-radius: 10px 0 0 10px;
@@ -35,6 +34,9 @@
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;
+        h1{
+            text-transform: uppercase;
+        }
         @include mq("tablet"){
             padding: 20px 30px;
         }
