@@ -5,6 +5,9 @@
 ```
 - HTML, CSS(SASS-SCSS)
 - Gulpfile.js, Browsersync
-
 ```
+
+## Preview 
+
+![screenshot](./images/screenshot.png/) 
 
